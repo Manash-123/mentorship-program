@@ -5,17 +5,6 @@
     box-sizing: border-box;
 }
 
-.container {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #fff;
-    padding: 10px;
-}
-
-table {
-    width: 100%;
-}
-
 table,
 th,
 td {
@@ -24,3 +13,13 @@ td {
     padding: 10px;
     text-align: center;
 }
+
+#table-data tr:nth-child(even){
+    background-color: #565454;
+}
+
+#table-data tr:nth-child(odd){
+    background-color: #8e7575;
+}
+
+

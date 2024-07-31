@@ -10,16 +10,20 @@
 </head>
 
 <body>
-    <div class="w-full min-h-screen p-4 bg-slate-400">
+    <div class="w-full min-h-screen p-4">
+        <div class="w-full flex justify-center mb-5">
+            <input class="border-2 border-black p-1 w-2/4" type="text" id="enterValue" oninput="searchText()" />
+            <button class="border-2 border-black bg-gray-400 p-1">Search</button>
+        </div>
         <div class="w-full">
-            <table>
+            <table id="data-table">
                 <thead>
-                    <tr>
-                        <th class="w-1/5">Breed Name</th>
+                    <tr class="">
+                        <th class="w-1/5" id="dogBreed">Breed Name<span class="mx-1 cursor-pointer" id="Breed" onclick="sortTable(0)">&#x2191;</span></th>
                         <th class="w-2/4">Description</th>
-                        <th>Age Range</th>
-                        <th>Male Weight Range</th>
-                        <th>Female Weight Range</th>
+                        <th id="ageBreed">Age Range<span class="mx-1 cursor-pointer" id="Age" onclick="sortTable(1)">&#x2191;</span></th>
+                        <th id="maleBreed">Male Weight Range<span class="mx-1  cursor-pointer" id="maleWeight" onclick="sortTable(2)">&#x2191;</span></th>
+                        <th id="femaleBreed">Female Weight Range<span class="mx-1 cursor-pointer" id="femaleWeight" onclick="sortTable(3)">&#x2191;</span></th>
                     </tr>
                 </thead>
                 <tbody id="table-data"></tbody>
